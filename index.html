@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGH Çalıştay Şartnamesi</title>
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --hover-color: #0056b3;
+      --bg-color: #f0f4f8;
+      --text-color: #333;
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 40px 20px 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .pdf-container {
+      width: 90%;
+      max-width: 900px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .pdf-container:hover {
+      transform: scale(1.01);
+    }
+
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-bottom: 50px;
+      padding: 14px 28px;
+      background-color: var(--primary-color);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .download-btn:hover {
+      background-color: var(--hover-color);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 60vh;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📄 AGH Çalıştay Şartnamesi</h1>
+    <p>Belgeyi aşağıdan görüntüleyebilir veya cihazınıza indirebilirsiniz.</p>
+  </header>
+
+  <div class="pdf-container">
+    <iframe src="AGH Çalıştay Şartnamesi.pdf" title="AGH Çalıştay Şartnamesi PDF"></iframe>
+  </div>
+
+  <a class="download-btn" href="AGH Çalıştay Şartnamesi.pdf" download>
+    📥 PDF'yi İndir
+  </a>
+
+</body>
+</html>
